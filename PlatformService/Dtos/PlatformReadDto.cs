@@ -1,4 +1,4 @@
-namespace PlatformServices.DbContextOptions
+namespace PlatformService.Dtos
 {
     public class PlatformReadDto
     {
