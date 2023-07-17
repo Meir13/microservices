@@ -19,7 +19,10 @@ namespace PlatformService.Data
 
         public IEnumerable<Platform> GetAllPlatform() => _context.Platforms.ToList();
 
-        public Platform GetPlatformById(int id) => _context.Platforms.FirstOrDefault(p => p.Id == id);
+        public Platform? GetPlatformById(int id)
+        {
+            return _context.Platforms.FirstOrDefault(p => p.Id == id);
+        }
 
         public bool SaveChanges() => _context.SaveChanges() >= 0;
     }
